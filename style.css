@@ -1,33 +1,27 @@
-*, html {
+*,
+html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "IBM Plex Serif", serif;
-    /* font-weight: 900; */
-}
-
-.social {
-    width: 70px;
 }
 
 body {
     height: 100vh;
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    font-size: 20pt;
 }
 
 header {
-    font-weight: 800;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
-.main-logo {
-    width: 180px;
-}
-
-.info {
-    display: flex;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .part {
@@ -38,13 +32,72 @@ header {
     width: 80px;
 }
 
+.info {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-around;
+    align-items: center;
+    height: 54%;
+}
+
+.contacts {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons {
+    gap: 18px;
+    display: flex;
+    margin: 10px;
+}
+
+.adress {
+    width: 500px;
+    text-align: center;
+}
+
+#right-adress {
+    width: 600px;
+}
+
+.social {
+    width: 70px;
+    pointer-events: none;
+}
+
+.main-logo {
+    height: 250px;
+    margin: 20px 20px 0px;
+}
+
 .menu {
     background-color: #F2D673;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+
+}
+
+.menu-link::after {
+    content: '';
+    display: flex;
+    width: 0%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: black;
+    position: sticky;
+    transition: .2s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.menu-active::after {
+    width: 100%;
 }
 
 .left-menu {
@@ -53,5 +106,5 @@ header {
 
 .right-menu {
     border-radius: 60px 0 0 60px;
-    
+
 }
